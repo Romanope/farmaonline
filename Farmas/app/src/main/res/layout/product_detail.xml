@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/img_product"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/ic_launcher"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"/>
+
+    <TextView
+        android:id="@+id/lbl_nm_product"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/img_product"
+        android:layout_marginRight="15dp" />
+
+    <TextView
+        android:id="@+id/lbl_vl_product"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lbl_nm_product"
+        android:layout_toRightOf="@+id/img_product"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="#000000"
+        android:layout_below="@+id/img_product"
+        android:layout_marginTop="5dip"
+        android:id="@+id/divisor"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title_dados_vendedor"
+        android:layout_below="@+id/divisor"
+        android:layout_marginTop="5dp"
+        android:id="@+id/title_vendedor"/>
+
+    <ImageView
+        android:id="@+id/img_logo_farma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/ic_launcher"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/title_vendedor"
+        android:layout_marginLeft="5dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lbl_nome_farma"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/title_vendedor"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lbl_fone_farma"
+        android:layout_below="@+id/lbl_nome_farma"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lbl_rua_farma"
+        android:layout_below="@+id/img_logo_farma"
+        android:layout_marginTop="15dp"
+        android:text="rua"
+        android:layout_marginLeft="15dp"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lbl_rua_farma"
+        android:layout_marginTop="15dp"
+        android:id="@+id/container_map"
+        android:padding="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lbl_to_maps"
+        android:textSize="10dp"
+        android:layout_below="@+id/container_map"
+        android:layout_marginTop="15dp"
+        android:text="Go to Maps"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="15dp"/>
+
+</RelativeLayout>

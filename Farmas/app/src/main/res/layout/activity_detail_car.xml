@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
+    <fragment
+        android:id="@+id/fragment_header"
+        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:name="com.farmaonline.farmas.viewutils.FragmentCar" >
+
+    </fragment>
+
+    <ListView
+        android:id="@+id/list_detail_car"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/fragment_header"
+        android:layout_above="@+id/layout3"
+        android:layout_alignParentLeft="true"
+        android:layout_weight="1"
+        android:divider="#BE6D79"
+        android:layout_marginTop="5dp"
+        android:dividerHeight="2dp"></ListView>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/layout3"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="#f0f8ff"
+        android:orientation="horizontal"
+        android:layout_marginBottom="5dp">
+
+        <Button
+            android:id="@+id/btn_cancelar"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="@string/btn_cancelar"/>
+
+        <Button
+            android:id="@+id/btn_finalizar"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="@string/btn_finalizar"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

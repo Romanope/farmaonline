@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">Farmas</string>
+    <string name="add_user_nome">Login</string>
+    <string name="add_user_senha">Senha</string>
+    <string name="add_user_email">Email</string>
+    <string name="add_user_btn_save">Save</string>
+    <string name="logn_in_login">Login</string>
+    <string name="logn_in_senha">Senha</string>
+    <string name="btn_login">Login</string>
+
+    <string name="frag_car_items">Itens: </string>
+    <string name="frag_car_subtotal">Subtotal: </string>
+    <string name="frag_car_desconto">Desconto: </string>
+    <string name="frag_car_total">Total: </string>
+    <string name="cifrao">R$ </string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="title_dados_vendedor">Dados do Vendedor</string>
+
+    <string name="lbl_rua">Rua: </string>
+    <string name="lbl_bairro">Bairro: </string>
+    <string name="lbl_cidade">Cidade: </string>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyC4zuqHuvSsylpAQzAfh97tZ4eSABH5EBI</string>
+
+    <string name="msg_add_product">Produto adicionado ao carrinho</string>
+    <string name="title_activity_order">Pedido</string>
+    <string name="btn_cancelar">Cancelar</string>
+    <string name="btn_finalizar">Finalizar</string>
+
+    <string name="msg_erro_finalizar_pedido">Pedido não realizado!!! favor verificar sua conexão com internet!</string>
+
+    <string name="lbl_sim">Sim</string>
+    <string name="lbl_nao">Não</string>
+    <string name="title_dialog">Cancelar pedido ?</string>
+
+    <string name="msg_agredecimento">Agradecemos pela compra!</string>
+    <string name="msg_confira_dados">Confira os dados do seu pedido</string>
+    <string name="result_nr_pedido">N. Pedido</string>
+    <string name="result_nr_itens">N. Itens</string>
+    <string name="msg_contatos">Em caso de dúvidas, contate-nos!!!</string>
+    <string name="msg_tempo_entrega">Tempo estimado da entrega:</string>
+    <string name="lbl_minuto">minutos</string>
+    <string name="msg_tel">Tel: </string>
+    <string name="email">Email: farmaonline@farmagroup.com.br</string>
+    <string name="btn_home_lbl">Início</string>
+    <string name="login_invalido">Senha ou login inválido!</string>
+    <string name="erro_validacao_cadastro">Todos os campos são obrigatórios!</string>
+    <string name="title_detalhes">Detalhes</string>
+
+
+</resources>

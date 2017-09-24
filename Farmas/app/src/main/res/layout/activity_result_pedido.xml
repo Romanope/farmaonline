@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.farmaonline.farmas.view.ResultPedidoActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/msg_agradecimento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/msg_agredecimento"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"/>
+   <!-- <view
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000000"
+        android:layout_marginTop="5dp"></view>-->
+    <TextView
+        android:id="@+id/dados_compra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/msg_confira_dados"
+        android:gravity="left"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="5dp"/>
+
+    <TextView
+        android:id="@+id/nr_pedido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="N. Pedido: "
+        android:gravity="left"
+        android:textSize="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="5dp"/>
+    <TextView
+        android:id="@+id/result_qtd_itens"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="N. Itens: "
+        android:gravity="left"
+        android:textSize="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"/>
+
+    <TextView
+        android:id="@+id/result_subtotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Subtotal: "
+        android:gravity="left"
+        android:textSize="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"/>
+
+    <TextView
+        android:id="@+id/result_desconto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Descontos: "
+        android:gravity="left"
+        android:textSize="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"/>
+
+    <TextView
+        android:id="@+id/result_total"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total do pedido: "
+        android:gravity="left"
+        android:textSize="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"/>
+
+    <TextView
+        android:id="@+id/result_tempo_entrega"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/msg_tempo_entrega"
+        android:gravity="left"
+        android:textSize="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"/>
+
+    <TextView
+        android:id="@+id/msg_duvidas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/msg_contatos"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:layout_marginTop="40dp" />
+
+    <TextView
+        android:id="@+id/lbl_nr_fone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/msg_tel"
+        android:gravity="left"
+        android:textSize="17dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="5dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/email"
+        android:gravity="left"
+        android:textSize="17dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="5dp"/>
+
+    <Button
+        android:id="@+id/btn_inicio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_home_lbl"
+        android:layout_marginTop="40dp"  />
+
+</LinearLayout>
