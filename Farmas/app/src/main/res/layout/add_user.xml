@@ -1,13 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/img_photo_user"
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/common_full_open_on_phone"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"/>
+
+    <ImageButton
+        android:id="@+id/btn_cam"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        app:srcCompat="@drawable/common_full_open_on_phone"
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="4dp"/>
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/add_user_nome" />
+        android:text="@string/add_user_nome"
+        android:layout_marginTop="10dp"/>
 
     <EditText
         android:id="@+id/add_user_input_nome"
