@@ -34,7 +34,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.AddUserActivity" />
+        <activity android:name=".view.AddUserActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".view.ProductListActivity" />
         <activity android:name=".view.DetailCarActivity" />
         <activity android:name=".view.ProductDetailActivity" />

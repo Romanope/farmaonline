@@ -62,11 +62,14 @@ public class MainActivity extends AppCompatActivity {
 
     public void login(View v) throws Exception {
 
-        Response response = ControladorUsuario.getInstance().logar(mLogin.getText().toString(), mSenha.getText().toString());
+
+        Intent intent = new Intent("com.farmaonline.farmas.action.OPEN_APP");
+        startActivity(intent);
+        /*Response response = ControladorUsuario.getInstance().logar(mLogin.getText().toString(), mSenha.getText().toString());
         if (response.getHttpCode() == Constants.HTTP_SUCCESS) {
             startActivity(new Intent(this, ProductListActivity.class));
         } else if (response.getHttpCode() == Constants.HTTP_UNAUTHORIZED) {
             Toast.makeText(this, getResources().getString(R.string.login_invalido), Toast.LENGTH_SHORT).show();
-        }
+        }*/
     }
 }
