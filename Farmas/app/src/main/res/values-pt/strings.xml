@@ -48,5 +48,8 @@
     <string name="erro_validacao_cadastro">Todos os campos são obrigatórios!</string>
     <string name="title_detalhes">Detalhes</string>
 
+    <string name="menu_dados_empresa">Farma Online Data</string>
+    <string name="lbl_btn_open_maps">Click here to open on Maps</string>
+    <string name="message_notification">Know our promotions</string>
 
 </resources>

@@ -113,14 +113,14 @@ public class FragmentCar extends Fragment {
     public static void updateQtdItems( String value) {
         if (currentInstance != null) {
             TextView textView = (TextView) currentInstance.getView().findViewById(R.id.lbl_itens);
-            textView.setText(currentInstance.getContext().getResources().getString(R.string.frag_car_subtotal) +  cifrao + " " + value);
+            textView.setText(currentInstance.getContext().getResources().getString(R.string.frag_car_items) + " " + value);
         }
     }
 
     public static void updateSubtotal(String value) {
         if (currentInstance != null) {
             TextView textView = (TextView) currentInstance.getView().findViewById(R.id.lbl_subtotal);
-            textView.setText(currentInstance.getContext().getResources().getString(R.string.frag_car_items) + cifrao + " " + value);
+            textView.setText(currentInstance.getContext().getResources().getString(R.string.frag_car_subtotal) + cifrao + " " + value);
         }
     }
 }

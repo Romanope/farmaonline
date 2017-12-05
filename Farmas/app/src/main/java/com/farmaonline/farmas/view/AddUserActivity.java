@@ -36,16 +36,10 @@ public class AddUserActivity extends AddUserHelperActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.add_user);
 
-        mTextNome = (EditText) findViewById(R.id.add_user_input_nome);
-        mTextSenha = (EditText) findViewById(R.id.add_user_input_senha);
-        mTextEmail = (EditText) findViewById(R.id.add_user_input_email);
-        mBtnCam = (ImageButton) findViewById(R.id.btn_cam);
-        mImgPhotoUser = (ImageView) findViewById(R.id.img_photo_user);
+        super.onCreate(savedInstanceState);
+
         addEventOpenCamera(mBtnCam);
-        mImgPhotoUser.setImageBitmap(loadImage(getPathImage().getAbsolutePath()));
     }
 
 

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.farmaonline.farmas.view.DadosEmpresaActivity"
+    android:weightSum="1">
+
+    <TextView
+        android:id="@+id/lbl_empresa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nome da empresa"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:id="@+id/lbl_cnpj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CNPJ da Empresa"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/lbl_endereco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Endereço da Empresa"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="10dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/container_map"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_weight="0.85"
+        android:orientation="vertical"
+        android:padding="10dp" />
+
+    <Button
+        android:id="@+id/btn_open_maps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_btn_open_maps"
+        android:onClick="openMaps"/>
+
+
+</LinearLayout>

@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.farmaonline.farmas.R;
 import com.farmaonline.farmas.controllers.ControladorUsuario;
+import com.farmaonline.farmas.model.Usuario;
 import com.farmaonline.farmas.services.Response;
 
 import util.Constants;
@@ -62,14 +63,37 @@ public class MainActivity extends AppCompatActivity {
 
     public void login(View v) throws Exception {
 
+        String login = mLogin.getText().toString();
+        String senha = mSenha.getText().toString();
 
-        Intent intent = new Intent("com.farmaonline.farmas.action.OPEN_APP");
-        startActivity(intent);
-        /*Response response = ControladorUsuario.getInstance().logar(mLogin.getText().toString(), mSenha.getText().toString());
-        if (response.getHttpCode() == Constants.HTTP_SUCCESS) {
+        Usuario usuario = ControladorUsuario.get(this).consultarUsuario(login);
+
+        boolean userIsValid = false;
+        if (usuario == null) {
+            Response response = ControladorUsuario.get(null).logar(mLogin.getText().toString(), mSenha.getText().toString());
+            if (response.getHttpCode() == Constants.HTTP_SUCCESS) {
+                salvarUsuarioLocalmente(login, senha);
+                userIsValid = true;
+            }
+        } else if (usuario != null) {
+            userIsValid = ControladorUsuario.get(null).validarUsuarioLocalmente(usuario, senha);
+        }
+
+        if (userIsValid) {
             startActivity(new Intent(this, ProductListActivity.class));
-        } else if (response.getHttpCode() == Constants.HTTP_UNAUTHORIZED) {
-            Toast.makeText(this, getResources().getString(R.string.login_invalido), Toast.LENGTH_SHORT).show();
-        }*/
+        } else {
+            showMessage();
+        }
+    }
+
+    private void showMessage () {
+        Toast.makeText(this, getResources().getString(R.string.login_invalido), Toast.LENGTH_SHORT).show();
+    }
+
+    private void salvarUsuarioLocalmente (String login, String senha) {
+        Usuario usuario = new Usuario();
+        usuario.setLogin(login);
+        usuario.setSenha(senha);
+        ControladorUsuario.get(this).saveLocal(usuario);
     }
 }

@@ -1,5 +1,9 @@
 package com.farmaonline.farmas.controllers;
 
+import android.content.Context;
+
+import com.farmaonline.farmas.UsuarioDAO;
+import com.farmaonline.farmas.model.Usuario;
 import com.farmaonline.farmas.services.Request;
 import com.farmaonline.farmas.services.Response;
 
@@ -18,18 +22,29 @@ public class ControladorUsuario {
 
     private static ControladorUsuario instance;
 
+    private Context mContex;
+
     private ControladorUsuario() {
 
     }
 
-    public static ControladorUsuario getInstance() {
+    public static ControladorUsuario get(Context context) {
         if (instance == null) {
             instance = new ControladorUsuario();
         }
+        instance.setContext(context);
         return instance;
     }
 
-    public Response saveUser(String userJson) {
+    private Context getContex () {
+        return this.mContex;
+    }
+
+    private void setContext (Context context) {
+        this.mContex = context;
+    }
+
+    public Response saveUser (String userJson) {
 
         if (userJson == null) {
             throw new IllegalArgumentException();
@@ -58,5 +73,20 @@ public class ControladorUsuario {
         }
 
         return null;
+    }
+
+    public boolean validarUsuarioLocalmente (Usuario usuario,String senhaDigitada) {
+
+        return usuario.getSenha().equals(senhaDigitada);
+    }
+
+    public Usuario consultarUsuario (String login) {
+
+        return UsuarioDAO.get(instance.getContex()).getUserByLogin(login);
+    }
+
+    public long saveLocal (Usuario usuario) {
+
+        return  UsuarioDAO.get(instance.getContex()).save(usuario);
     }
 }

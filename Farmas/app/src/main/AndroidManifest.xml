@@ -12,9 +12,14 @@
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
-    <uses-feature android:name="android.hardware.camera" android:required="true" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -34,9 +39,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.AddUserActivity" >
+        <activity android:name=".view.AddUserActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -44,7 +50,8 @@
         <activity android:name=".view.DetailCarActivity" />
         <activity android:name=".view.ProductDetailActivity" />
         <activity android:name=".viewutils.MapsFragment" />
-        <activity android:name=".view.ResultPedidoActivity"></activity>
+        <activity android:name=".view.ResultPedidoActivity" />
+        <activity android:name=".view.DadosEmpresaActivity"></activity>
     </application>
 
 </manifest>

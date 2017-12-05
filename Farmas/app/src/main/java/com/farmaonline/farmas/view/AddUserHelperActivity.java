@@ -5,6 +5,7 @@ import android.content.ContextWrapper;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
@@ -13,7 +14,10 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.farmaonline.farmas.R;
+import com.farmaonline.farmas.UsuarioDAO;
 import com.farmaonline.farmas.controllers.ControladorUsuario;
+import com.farmaonline.farmas.database.SQLiteDatabaseHandler;
+import com.farmaonline.farmas.model.Usuario;
 import com.farmaonline.farmas.services.Response;
 
 import org.json.JSONException;
@@ -49,6 +53,23 @@ public class AddUserHelperActivity extends AppCompatActivity {
     protected ImageButton mBtnCam;
 
     protected ImageView mImgPhotoUser;
+
+    SQLiteDatabaseHandler handler;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.add_user);
+
+        mTextNome = (EditText) findViewById(R.id.add_user_input_nome);
+        mTextSenha = (EditText) findViewById(R.id.add_user_input_senha);
+        mTextEmail = (EditText) findViewById(R.id.add_user_input_email);
+        mBtnCam = (ImageButton) findViewById(R.id.btn_cam);
+        mImgPhotoUser = (ImageView) findViewById(R.id.img_photo_user);
+        mImgPhotoUser.setImageBitmap(loadImage(getPathImage().getAbsolutePath()));
+
+        handler = new SQLiteDatabaseHandler(getBaseContext());
+    }
 
     protected File getPathImage() {
         ContextWrapper cw = new ContextWrapper(getApplicationContext());
@@ -93,13 +114,14 @@ public class AddUserHelperActivity extends AppCompatActivity {
         return image;
     }
 
-    protected void save(View v) throws Exception {
+    public void save(View v) throws Exception {
 
         if (dadosValidos()) {
             String login = mTextNome.getText().toString();
             String json = createJson();
-            Response response = ControladorUsuario.getInstance().saveUser(json.toString());
+            Response response = ControladorUsuario.get(null).saveUser(json.toString());
             if (response.getHttpCode() == Constants.HTTP_CREATED) {
+                saveLocal();
                 Intent intent = new Intent(this, MainActivity.class);
                 intent.putExtra("login", login);
                 startActivity(intent);
@@ -107,6 +129,18 @@ public class AddUserHelperActivity extends AppCompatActivity {
         } else {
             Toast.makeText(getBaseContext(), getResources().getString(R.string.erro_validacao_cadastro), Toast.LENGTH_SHORT).show();
         }
+    }
+
+    private void saveLocal () {
+
+        Usuario usuario = new Usuario();
+
+        usuario.setLogin(mTextNome.getText().toString());
+        usuario.setSenha(mTextSenha.getText().toString());
+        usuario.setEmail(mTextEmail.getText().toString());
+
+        long id = UsuarioDAO.get(this).save(usuario);
+        Toast.makeText(this, "ID INSERIDO: " + id, Toast.LENGTH_LONG).show();
     }
 
     protected String createJson() throws JSONException {

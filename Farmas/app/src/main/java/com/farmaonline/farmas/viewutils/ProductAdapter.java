@@ -83,8 +83,8 @@ public class ProductAdapter extends ArrayAdapter<Product> {
         viewHolderProduct.btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            ControladorCarroCompra.addProductToListAnd(product);
-            updateTotals();
+                ControladorCarroCompra.addProductToListAnd(product);
+                updateTotals();
             }
         });
         viewHolderProduct.btnDetailProduct.setOnClickListener(new View.OnClickListener() {
