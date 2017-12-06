@@ -65,9 +65,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void login(View v) throws Exception {
 
-        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.google.com"));
-        startActivity(browserIntent);
-         /*String login = mLogin.getText().toString();
+        String login = mLogin.getText().toString();
         String senha = mSenha.getText().toString();
 
         Usuario usuario = ControladorUsuario.get(this).consultarUsuario(login);
@@ -87,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(new Intent(this, ProductListActivity.class));
         } else {
             showMessage();
-        }*/
+        }
     }
 
     private void showMessage () {
