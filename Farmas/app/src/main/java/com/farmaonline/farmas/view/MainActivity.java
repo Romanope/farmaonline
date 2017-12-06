@@ -1,6 +1,7 @@
 package com.farmaonline.farmas.view;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -64,7 +65,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void login(View v) throws Exception {
 
-        String login = mLogin.getText().toString();
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.google.com"));
+        startActivity(browserIntent);
+         /*String login = mLogin.getText().toString();
         String senha = mSenha.getText().toString();
 
         Usuario usuario = ControladorUsuario.get(this).consultarUsuario(login);
@@ -84,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(new Intent(this, ProductListActivity.class));
         } else {
             showMessage();
-        }
+        }*/
     }
 
     private void showMessage () {

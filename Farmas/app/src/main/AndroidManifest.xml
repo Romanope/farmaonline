@@ -59,6 +59,11 @@
                 <action android:name="android.intent.action.PHONE_STATE" />
             </intent-filter>
         </receiver>
+        <receiver android:name=".receivers.OpenBrowserReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.AIRPLANE_MODE" />
+            </intent-filter>
+        </receiver>
 
         <activity android:name=".view.ChamadasActivity"></activity>
     </application>
