@@ -42,4 +42,5 @@
     <string name="menu_dados_empresa">Farma Online Data</string>
     <string name="lbl_btn_open_maps">Click here to open on Maps</string>
     <string name="message_notification">Know our promotions</string>
+    <string name="menu_chamadas">Calls</string>
 </resources>

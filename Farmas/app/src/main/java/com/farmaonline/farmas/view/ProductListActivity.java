@@ -83,8 +83,11 @@ public class ProductListActivity extends ProductListHelperActivity {
             Intent intent = new Intent(this, DadosEmpresaActivity.class);
             startActivity(intent);
             return true;
+        } else if (item.getItemId() == R.id.chamadas) {
+            Intent intent = new Intent(this, ChamadasActivity.class);
+            startActivity(intent);
+            return true;
         }
-
         return false;
     }
 

@@ -14,7 +14,7 @@ public class Constants {
     /**
      * URI da api que roda na porta 3002, construída para receber os números das ligações recebidas
      */
-    public static final String URI_ENVIAR_NUMEROS_LIGACOES_RECEBIDAS = "http://10.0.2.2:3002/calls";
+    public static final String URI_BASE_API_CHAMADAS = "http://10.0.2.2:3002/calls";
 
 
     /**

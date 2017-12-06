@@ -2,10 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.farmaonline.farmas">
 
-
     <permission
         android:name="com.example.permission.MAPS_RECEIVE"
         android:protectionLevel="signature" />
+
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="com.example.permission.MAPS_RECEIVE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -52,12 +52,15 @@
         <activity android:name=".view.ProductDetailActivity" />
         <activity android:name=".viewutils.MapsFragment" />
         <activity android:name=".view.ResultPedidoActivity" />
-        <activity android:name=".view.DadosEmpresaActivity"></activity>
+        <activity android:name=".view.DadosEmpresaActivity" />
+
         <receiver android:name=".receivers.SaveNumberCallsReceiver">
             <intent-filter>
-                <action android:name="android.intent.action.PHONE_STATE" ></action>
+                <action android:name="android.intent.action.PHONE_STATE" />
             </intent-filter>
         </receiver>
+
+        <activity android:name=".view.ChamadasActivity"></activity>
     </application>
 
 </manifest>
