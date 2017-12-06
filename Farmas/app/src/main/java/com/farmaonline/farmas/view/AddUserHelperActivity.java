@@ -14,7 +14,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.farmaonline.farmas.R;
-import com.farmaonline.farmas.UsuarioDAO;
+import com.farmaonline.farmas.database.UsuarioDAO;
 import com.farmaonline.farmas.controllers.ControladorUsuario;
 import com.farmaonline.farmas.database.SQLiteDatabaseHandler;
 import com.farmaonline.farmas.model.Usuario;

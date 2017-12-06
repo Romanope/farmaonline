@@ -2,7 +2,7 @@ package com.farmaonline.farmas.controllers;
 
 import android.content.Context;
 
-import com.farmaonline.farmas.UsuarioDAO;
+import com.farmaonline.farmas.database.UsuarioDAO;
 import com.farmaonline.farmas.model.Usuario;
 import com.farmaonline.farmas.services.Request;
 import com.farmaonline.farmas.services.Response;

@@ -1,13 +1,11 @@
-package com.farmaonline.farmas;
+package com.farmaonline.farmas.database;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
-import android.widget.Toast;
 
-import com.farmaonline.farmas.database.SQLiteDatabaseHandler;
 import com.farmaonline.farmas.model.Usuario;
 
 /**

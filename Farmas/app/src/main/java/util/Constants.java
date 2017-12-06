@@ -11,6 +11,11 @@ public class Constants {
      */
     public static final String URI_CONSULTAR_DADOS_FARMA_ONLINE = "http://10.0.2.2:3001/farmaonline/contato";
 
+    /**
+     * URI da api que roda na porta 3002, construída para receber os números das ligações recebidas
+     */
+    public static final String URI_ENVIAR_NUMEROS_LIGACOES_RECEBIDAS = "http://10.0.2.2:3002/calls";
+
 
     /**
      * URIs utilizadas para consumir serviços referentes aos dados dos produtos e das empresas que os vende.
